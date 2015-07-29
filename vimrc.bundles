@@ -1,0 +1,57 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+" Define bundles via Github repos
+Bundle 'gmarik/vundle'
+
+" Core enhancements
+Bundle 'chriskempson/base16-vim'
+Bundle 'danro/rename.vim'
+Bundle 'itchyny/lightline.vim'
+Bundle 'vim-scripts/ShowTrailingWhitespace'
+Bundle 'vim-scripts/DeleteTrailingWhitespace'
+Bundle 'tpope/vim-unimpaired'
+
+" IDE-ish enhancements
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
+Bundle 'benmills/vimux'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'rking/ag.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
+
+" Code editing enhancements
+Bundle 'tmhedberg/matchit'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/tComment'
+Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'jgdavey/vim-blockle'
+Bundle 'ecomba/vim-ruby-refactoring'
+
+" File type handlers
+Bundle 'xenoterracide/html.vim'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'slim-template/vim-slim.git'
+
+" Snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+
+filetype on

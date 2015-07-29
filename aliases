@@ -1,0 +1,53 @@
+# Todo
+alias todo='$EDITOR ~/.todo'
+
+# Unix
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+alias loc='find . \( -not -path "./tmp/*" \) \( -name "*.rb" -o -name "*.rake" -o -name "*.js" -o -name "*.scss" -o -name "*.erb" -o -name "*.slim" -o -name "*.coffee" \) | xargs wc -l'
+
+# git
+alias g="git"
+
+# Bundler
+alias b="bundle"
+alias be="bundle exec"
+
+# Rails
+alias r="rails"
+alias migrate="bundle exec rake db:migrate db:test:prepare"
+alias bingen="bundle exec rake rails:update:bin && bundle binstubs rspec-core"
+
+# Turn off corrections
+alias gitx='nocorrect gitx'
+
+# Network
+alias whats-my-ip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+
+# Misc commands
+alias pgstart='postgres -D /usr/local/pgsql/data'
+
+# Auto lh after cd
+function chpwd() {
+  emulate -L zsh
+  lh
+}
+
+# Open repository's github project page
+function gh() {
+  giturl=$(git config --get remote.origin.url)
+
+  if [ "$giturl" -eq "" ]
+    then
+     echo "Not a git repository or no remote.origin.url set"
+     return
+  fi
+
+  giturl=${giturl/git\@github\.com\:/https://github.com/}
+  giturl=${giturl/\.git//}
+  echo $giturl
+  open $giturl
+}

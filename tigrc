@@ -1,0 +1,19 @@
+set blame-view = date:relative author:full file-name:auto id:yes,color line-number:no,interval=5 text
+set grep-view = file-name:no line-number:yes,interval=1 text
+set main-view = line-number:no,interval=5 id:yes date:short author:full commit-title:yes,graph,refs,overflow=no
+set refs-view = line-number:no id:no date:relative author:full ref commit-title
+set stash-view = line-number:no,interval=5 id:no date:short author:full commit-title
+set status-view = line-number:no,interval=5 status:short file-name
+set tree-view = line-number:no,interval=5 mode author:full file-size date:short id:no file-name
+
+bind generic g move-first-line
+bind generic G move-last-line
+bind generic n next
+bind generic p previous
+
+bind main o enter
+bind status o enter
+
+set commit-order = topo         # togological commit order
+set blame-options = -C -C -C    # Blame lines from other files
+set line-graphics = utf-8
