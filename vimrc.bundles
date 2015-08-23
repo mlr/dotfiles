@@ -15,6 +15,7 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'vim-scripts/ShowTrailingWhitespace'
 Bundle 'vim-scripts/DeleteTrailingWhitespace'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'majutsushi/tagbar'
 
 " IDE-ish enhancements
 Bundle 'scrooloose/nerdtree'

@@ -126,6 +126,9 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 nmap <Leader>g :exec("tag ".expand("<cword>"))<CR>
 nmap <Leader>G :vs <CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Tagbar toggling
+nmap <F9> :TagbarToggle<CR>
+
 " Remove trailing whitespace
 autocmd BufWritePre * :DeleteTrailingWhitespace
 
