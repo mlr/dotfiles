@@ -150,9 +150,6 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" dbtext configuration
-let g:dbext_default_profile_psql_for_rails = 'type=PSQL:user=:passwd=:dsnname=rails db:dbname='
-
 " turbux settings
 let g:turbux_command_rspec = 'bin/rspec'
 
