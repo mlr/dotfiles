@@ -20,6 +20,7 @@ alias be="bundle exec"
 alias r="rails"
 alias migrate="bundle exec rake db:migrate db:test:prepare"
 alias bingen="bundle exec rake rails:update:bin && bundle binstubs rspec-core"
+alias rspec="bundle exec rspec"
 
 # Turn off corrections
 alias gitx='nocorrect gitx'
