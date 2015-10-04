@@ -37,6 +37,7 @@
     df = diff
     ready = rebase -i @{u}
     lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    llg = log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cd)%Creset %C(bold blue)<%an>%Creset' --date=local
 
 [core]
   excludesfile = /Users/Ronnie/.gitignore_global
