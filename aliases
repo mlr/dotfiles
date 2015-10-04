@@ -40,14 +40,14 @@ function chpwd() {
 function gh() {
   giturl=$(git config --get remote.origin.url)
 
-  if [ "$giturl" -eq "" ]
+  if [ -z "$giturl" ]
     then
      echo "Not a git repository or no remote.origin.url set"
      return
   fi
 
   giturl=${giturl/git\@github\.com\:/https://github.com/}
-  giturl=${giturl/\.git//}
+  giturl=${giturl/\.git$//}
   echo $giturl
   open $giturl
 }
