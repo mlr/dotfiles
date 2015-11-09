@@ -11,6 +11,9 @@ alias loc='find . \( -not -path "./tmp/*" \) \( -name "*.rb" -o -name "*.rake" -
 
 # git
 alias g="git"
+alias gr="g rebase -i HEAD~5"
+alias grr="g rebase -i HEAD~10"
+alias grrr="g rebase -i HEAD~15"
 
 # Bundler
 alias b="bundle"
