@@ -161,6 +161,7 @@ au BufRead,BufNewFile Gemfile set filetype=ruby
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.md setlocal spell
 au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.e[ex] set filetype=elixir
 
 highlight OverLength ctermbg=235 ctermfg=250 guibg=#592929
 au BufRead,BufNewFile *.md match OverLength /\%81v.\+/

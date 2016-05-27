@@ -49,6 +49,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'slim-template/vim-slim.git'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'avdgaag/vim-phoenix'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
