@@ -7,13 +7,14 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
-alias loc='find . \( -not -path "./tmp/*" \) \( -name "*.rb" -o -name "*.rake" -o -name "*.js" -o -name "*.scss" -o -name "*.erb" -o -name "*.slim" -o -name "*.coffee" \) | xargs wc -l'
+alias loc='find . \( -not -path "./tmp/*" \) \( -not -path "./node_modules/*" \) \( -not -path "./db/migrate/*" \) \( -not -path "./webpack/*" \) \( -name "*.rb" -o -name "*.rake" -o -name "*.js" -o -name "*.scss" -o -name "*.erb" -o -name "*.slim" -o -name "*.coffee" -o -name "*.jsx" \) | xargs wc -l'
 
 # git
 alias g="git"
 alias gr="g rebase -i HEAD~5"
 alias grr="g rebase -i HEAD~10"
 alias grrr="g rebase -i HEAD~15"
+alias wip="g add . && g commit -am 'wip'"
 
 # Bundler
 alias b="bundle"
@@ -24,6 +25,7 @@ alias r="rails"
 alias migrate="bundle exec rake db:migrate db:test:prepare"
 alias bingen="bundle exec rake rails:update:bin && bundle binstubs rspec-core"
 alias rspec="bundle exec rspec"
+alias deploy="cap production deploy"
 
 # Turn off corrections
 alias gitx='nocorrect gitx'
@@ -44,13 +46,13 @@ function chpwd() {
 function gh() {
   giturl=$(git config --get remote.origin.url)
 
-  if [ -z "$giturl" ]
-    then
-     echo "Not a git repository or no remote.origin.url set"
-     return
+  if [ -z "$giturl" ]; then
+    echo "Not a git repository or no remote.origin.url set"
+    return
   fi
 
   giturl=${giturl/git\@github\.com\:/https://github.com/}
+  giturl=${giturl/git\@bitbucket\.org\:/https://bitbucket.org/}
   giturl=${giturl/\.git$//}
   echo $giturl
   open $giturl
