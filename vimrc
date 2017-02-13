@@ -87,6 +87,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 autocmd VimEnter * :call indent_guides#enable()
 
+" Prettier formatting
+autocmd FileType javascript set formatprg=prettier\ --single-quote\ --stdin
+autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
+autocmd BufWritePre *.jsx exe "normal! gggqG\<C-o>\<C-o>"
+
 " Numbers
 set number
 set numberwidth=5
