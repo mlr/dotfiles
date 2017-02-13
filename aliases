@@ -22,6 +22,7 @@ alias be="bundle exec"
 
 # Rails
 alias r="rails"
+alias rake="bundle exec rake"
 alias migrate="bundle exec rake db:migrate db:test:prepare"
 alias bingen="bundle exec rake rails:update:bin && bundle binstubs rspec-core"
 alias rspec="bundle exec rspec"
@@ -29,6 +30,7 @@ alias deploy="cap production deploy"
 
 # Turn off corrections
 alias gitx='nocorrect gitx'
+alias jest='nocorrect jest'
 
 # Network
 alias whats-my-ip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
