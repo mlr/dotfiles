@@ -72,9 +72,10 @@ syntax enable
 set background=dark
 let base16colorspace=256
 try
-  colorscheme base16-default
+  colorscheme base16-default-dark
 catch
 endtry
+hi Normal       guibg=#808080
 hi NonText      guibg=#060606
 hi Folded       guibg=#0A0A0A guifg=#9090D0
 hi LineNr       term=bold ctermfg=DarkGrey guifg=DarkGrey
