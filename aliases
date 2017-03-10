@@ -46,16 +46,12 @@ function chpwd() {
 
 # Open repository's github project page
 function gh() {
-  giturl=$(git config --get remote.origin.url)
+  giturl=$(git ls-remote --get-url)
 
   if [ -z "$giturl" ]; then
-    echo "Not a git repository or no remote.origin.url set"
+    echo "Not a git repository or no remote set"
     return
   fi
 
-  giturl=${giturl/git\@github\.com\:/https://github.com/}
-  giturl=${giturl/git\@bitbucket\.org\:/https://bitbucket.org/}
-  giturl=${giturl/\.git$//}
-  echo $giturl
-  open $giturl
+  open `echo $giturl | sed 's/git\@\(.*\):\(.*\)\.git$/https:\/\/\1\/\2/'`
 }
