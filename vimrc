@@ -36,9 +36,9 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-" Load up vim bundles
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+" Load up vim plugins
+if filereadable(expand("~/.vimrc.plugs"))
+  source ~/.vimrc.plugs
 endif
 
 filetype plugin indent on
@@ -111,7 +111,7 @@ map <Leader>vm :RVmodel<cr>
 map <Leader>vu :RVunittest<CR>
 map <Leader>vv :RVview<cr>
 map <Leader>vi :vsp ~/.vimrc<CR>
-map <Leader>vb :vsp ~/.vimrc.bundles<CR>
+map <Leader>vp :vsp ~/.vimrc.plugs<CR>
 
 " Helpers to line up chunks of code
 map <C-\> :Tab /=<cr>

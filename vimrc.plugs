@@ -1,0 +1,58 @@
+set nocompatible
+filetype off
+
+call plug#begin('~/.vim/plugged')
+
+" Core enhancements
+Plug 'chriskempson/base16-vim'
+Plug 'danro/rename.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'vim-scripts/ShowTrailingWhitespace'
+Plug 'vim-scripts/DeleteTrailingWhitespace'
+Plug 'tpope/vim-unimpaired'
+Plug 'majutsushi/tagbar'
+
+" IDE-ish enhancements
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'benmills/vimux'
+Plug 'jgdavey/vim-turbux'
+Plug 'rking/ag.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
+
+" Code editing enhancements
+Plug 'tmhedberg/matchit'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/tComment'
+Plug 'godlygeek/tabular'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'jgdavey/vim-blockle'
+Plug 'ecomba/vim-ruby-refactoring'
+
+" File type handlers
+Plug 'xenoterracide/html.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-markdown'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'kchmck/vim-coffee-script'
+Plug 'elixir-lang/vim-elixir'
+Plug 'avdgaag/vim-phoenix'
+
+" Snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+" Initialize plugin system
+call plug#end()
+
+filetype on
