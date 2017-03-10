@@ -79,3 +79,5 @@ source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.3.0
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

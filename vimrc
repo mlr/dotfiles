@@ -67,6 +67,9 @@ if executable("ag")
   let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;log/*;vendor/**;coverage/**;tmp/**;rdoc/**"
 endif
 
+" Setup fzf search
+map <C-p> :Files<CR>
+
 " Color scheme
 syntax enable
 set background=dark
@@ -257,12 +260,6 @@ let g:syntastic_check_on_wq = 0
 " configure nerdtree
 map <F2> :NERDTreeToggle<CR>
 autocmd FileType nerdtree cnoreabbrev <buffer> bd :NERDTreeToggle
-
-" configure ctrlp
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = "_site/*"
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-set wildignore+=*/tmp/*,*/log/*,*/bin/*,.DS_Store,*/node_modules/*
 
 " configure snipmate
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=javascript-jquery
