@@ -14,9 +14,12 @@ There is configuration for `zsh` so switch your shell from the default `bash` to
 
     chsh -s /bin/zsh
 
-Setup Vundle
+Setup vim-plug
 ------------
 
-Setup vundle for vim. Then run `:BundleInstall` within vim.
+Setup [vim-plug](https://github.com/junegunn/vim-plug) for managing vim plugins. Then run `:PlugInstall` within vim.
 
-     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
