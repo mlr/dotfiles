@@ -77,6 +77,7 @@ setopt EXTENDED_GLOB
 # Setup chruby for managing ruby versions
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.3.0
+source /usr/local/share/chruby/auto.sh
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
