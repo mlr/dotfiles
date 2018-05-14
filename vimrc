@@ -228,8 +228,32 @@ nnoremap <silent> <Leader>- :exe ":vertical resize " . (winwidth(0) * 3/4)<CR>
 nnoremap <silent> <Leader>_ :exe "resize " . (winheight(0) * 5/6)<CR>
 
 " Mappings for easier window swapping
-noremap <silent> <leader>h :call SwapWindowLeft()<CR>
-noremap <silent> <leader>l :call SwapWindowRight()<CR>
+function! MarkWindowSwap()
+    " marked window number
+    let g:markedWinNum = winnr()
+    let g:markedBufNum = bufnr("%")
+endfunction
+
+function! DoWindowSwap()
+    let curWinNum = winnr()
+    let curBufNum = bufnr("%")
+    " Switch focus to marked window
+    exe g:markedWinNum . "wincmd w"
+
+    " Load current buffer on marked window
+    exe 'hide buf' curBufNum
+
+    " Switch focus to current window
+    exe curWinNum . "wincmd w"
+
+    " Load marked buffer on current window
+    exe 'hide buf' g:markedBufNum
+endfunction
+
+nnoremap <silent> <leader>h :call MarkWindowSwap()<CR> <C-w>h :call DoWindowSwap()<CR>
+nnoremap <silent> <leader>j :call MarkWindowSwap()<CR> <C-w>j :call DoWindowSwap()<CR>
+nnoremap <silent> <leader>k :call MarkWindowSwap()<CR> <C-w>k :call DoWindowSwap()<CR>
+nnoremap <silent> <leader>l :call MarkWindowSwap()<CR> <C-w>l :call DoWindowSwap()<CR>
 
 " ,cf - copy to clipboard the current
 " file path relative to the project
