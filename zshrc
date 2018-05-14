@@ -91,3 +91,6 @@ source /usr/local/share/chruby/auto.sh
 
 # fzf fuzzy search setup
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+
+# Machine-specific zsh aliases
+[[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
