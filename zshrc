@@ -83,6 +83,11 @@ source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.3.0
 source /usr/local/share/chruby/auto.sh
 
+# zsh autocompletion setup
+[[ -s $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# tmuxinator setup
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fzf fuzzy search setup
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
