@@ -46,11 +46,15 @@ stty stop undef
 # prompt
 export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
+# keep tons of history and share between terminals
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=$HISTSIZE
+setopt share_history
+
 # ignore duplicate history entries
 setopt histignoredups
-
-# keep TONS of history
-export HISTSIZE=4096
+setopt inc_append_history
 
 # look for ey config in project dirs
 export EYRC=./.eyrc
