@@ -5,6 +5,7 @@ Clone this repo into your home directory.
 
     git clone git@github.com:mlr/dotfiles.git
     cd dotfiles
+    git submodule update --init --recursive
     ./install.sh
 
 This will create symlinks for all config files in your home directory. You can
