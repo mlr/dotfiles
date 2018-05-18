@@ -1,7 +1,7 @@
 # Todo
 alias todo='$EDITOR ~/.todo'
 
-# Unix
+# Unix / Tmux
 alias mkdir='mkdir -p'
 alias ...='../..'
 alias l='ls'
@@ -9,6 +9,7 @@ alias ll='ls -al'
 alias lh='ls -Alh'
 alias loc='find . \( -not -path "./tmp/*" \) \( -not -path "./node_modules/*" \) \( -not -path "./assets/node_modules/*" \) \( -not -path "./db/migrate/*" \) \( -not -path "./webpack/*" \) \( -name "*.rb" -o -name "*.rake" -o -name "*.js" -o -name "*.scss" -o -name "*.erb" -o -name "*.slim" -o -name "*.coffee" -o -name "*.jsx" -o -name "*.exs" -o -name "*.ex" \) | xargs wc -l'
 alias mux='tmuxinator'
+alias tkill='tmux kill-session -t'
 
 # git
 alias g="git"
