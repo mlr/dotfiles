@@ -92,9 +92,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 autocmd VimEnter * :call indent_guides#enable()
 
 " Prettier formatting
-autocmd FileType javascript set formatprg=prettier\ --single-quote\ --stdin
-autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
-autocmd BufWritePre *.jsx exe "normal! gggqG\<C-o>\<C-o>"
+let g:prettier#autoformat = 0
+let g:prettier#config#bracket_spacing = 'true'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
 
 " Numbers
 set number
