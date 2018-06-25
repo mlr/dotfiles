@@ -34,6 +34,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'jgdavey/vim-blockle'
 Plug 'ecomba/vim-ruby-refactoring'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " File type handlers
 Plug 'xenoterracide/html.vim'
