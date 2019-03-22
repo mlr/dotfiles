@@ -208,6 +208,12 @@ au BufRead,BufNewFile *.e[ex] set filetype=elixir
 highlight OverLength ctermbg=235 ctermfg=250 guibg=#592929
 au BufRead,BufNewFile *.md match OverLength /\%81v.\+/
 
+" Markdown preview options
+nmap <silent> <leader>m <Plug>MarkdownPreview        " for normal mode
+imap <silent> <leader>m <Plug>MarkdownPreview        " for insert mode
+nmap <silent> <leader>M <Plug>StopMarkdownPreview    " for normal mode
+imap <silent> <leader>M <Plug>StopMarkdownPreview    " for insert mode
+
 " Open new split panes to right and bottom
 set splitbelow
 set splitright
