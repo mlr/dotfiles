@@ -143,3 +143,6 @@ load-nvmrc
 
 # Disable SAM metrics
 export SAM_CLI_TELEMETRY=0
+
+# Added by Amplify CLI binary installer
+export PATH="$HOME/.amplify/bin:$PATH"
