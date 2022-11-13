@@ -1,8 +1,29 @@
 # Path
-export PATH=/usr/local/bin:/opt/local/bin:/Users/Ronnie/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/opt/local/bin:/Users/ronnie/bin:/usr/local/sbin:$PATH
 
-# load base16
-source "$HOME/.zsh/base16-default.sh"
+# add base16-shell
+BASE16_SHELL="$HOME/dotfiles/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        source "$BASE16_SHELL/profile_helper.sh"
+
+function base16_random() {
+  themes=$(find -f ~/dotfiles/base16-shell/scripts | cut -d/ -f7 | sed 's/\.sh//' | sed 's/base16-/base16_/g')
+
+  # Allow setting a random theme based on a grep.
+  # ex:
+  # base16_random light
+  # base16_random dark
+  # base16_random material
+  # base16_random solarize
+  if [ ! -z "$1" ]; then
+    themes=$(echo $themes | grep $1)
+  fi
+
+  randomtheme=$(echo $themes | shuf -n1)
+  echo "$randomtheme"
+  eval $randomtheme
+}
 
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)

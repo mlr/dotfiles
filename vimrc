@@ -70,19 +70,17 @@ endif
 " Setup fzf search
 map <C-p> :Files<CR>
 
-" Color scheme
+" Colors
 syntax enable
-set background=dark
 let base16colorspace=256
-try
-  colorscheme base16-default-dark
-catch
-endtry
-hi Normal       guibg=#808080
-hi NonText      guibg=#060606
-hi Folded       guibg=#0A0A0A guifg=#9090D0
-hi LineNr       term=bold ctermfg=DarkGrey guifg=DarkGrey
-hi CursorLineNr term=bold ctermfg=White guifg=White
+
+" Use base16 to define colorscheme
+if exists('$BASE16_THEME')
+    \ && (!exists('g:colors_name')
+    \ || g:colors_name != 'base16-$BASE16_THEME')
+  let base16colorspace=256
+  colorscheme base16-$BASE16_THEME
+endif
 
 " Indent guides
 let g:indent_guides_auto_colors = 0
@@ -267,7 +265,7 @@ nnoremap <leader>cf :let @*=expand("%")<CR>
 
 " configure lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'base16',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ],

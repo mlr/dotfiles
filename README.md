@@ -1,6 +1,6 @@
 ## Install
 
-### 1. Clone dotfiles
+### Clone dotfiles
 
 Clone this repo into your home directory and run the install script.
 
@@ -15,7 +15,7 @@ There is configuration for `zsh` so switch your shell from the default `bash` to
 
     chsh -s /bin/zsh
 
-### 2. Setup vim-plug
+### Setup vim-plug
 
 Setup [vim-plug](https://github.com/junegunn/vim-plug) for managing vim plugins. Then run `:PlugInstall` within vim.
 
@@ -24,7 +24,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-### 3. Setup zsh-autosuggestions
+### Setup zsh-autosuggestions
 
 Clone the repository:
 
@@ -33,3 +33,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 ```
 
 See full install instructions at [zsh-autosuggestions/INSTALL.md](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+
+### Setup base16-shell
+
+Clone the repository:
+
+```
+git clone https://github.com/tinted-theming/base16-shell.git ~/dotfiles/base16-shell
+```
+
+See full install instructions at [https://github.com/tinted-theming/base16-shell](https://github.com/tinted-theming/base16-shell)
+
