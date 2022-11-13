@@ -101,7 +101,7 @@ setopt EXTENDED_GLOB
 
 # Setup chruby for managing ruby versions
 source /usr/local/share/chruby/chruby.sh
-chruby ruby-2.3.0
+chruby ruby-2.7.6
 source /usr/local/share/chruby/auto.sh
 
 # zsh autocompletion setup
