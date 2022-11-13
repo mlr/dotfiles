@@ -104,6 +104,31 @@ source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.7.6
 source /usr/local/share/chruby/auto.sh
 
+# Setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Automatically use .nvmrc file in current directory
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local nvmrc_path=".nvmrc"
+
+  if [ -f "$nvmrc_path" ]; then
+    local node_version="$(nvm version)"
+
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 # zsh autocompletion setup
 [[ -s $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
