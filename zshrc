@@ -150,3 +150,7 @@ export PATH="$HOME/.amplify/bin:$PATH"
 # jenv (Java version manager)
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# Android Studio
+export ANDROID_HOME=/Users/ronnie/Library/Android/sdk
+export PATH=/Users/ronnie/Library/Android/sdk/platform-tools:$PATH
