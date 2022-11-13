@@ -137,10 +137,6 @@ nmap <F9> :TagbarToggle<CR>
 " Remove trailing whitespace
 autocmd BufWritePre * :DeleteTrailingWhitespace
 
-" Cucumber navigation commands
-autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
-autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
-
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
