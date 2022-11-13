@@ -146,3 +146,7 @@ export SAM_CLI_TELEMETRY=0
 
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
+
+# jenv (Java version manager)
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
