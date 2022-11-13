@@ -140,3 +140,6 @@ load-nvmrc
 
 # Machine-specific zsh aliases
 [[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+
+# Disable SAM metrics
+export SAM_CLI_TELEMETRY=0
