@@ -21,7 +21,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'benmills/vimux'
 Plug 'jgdavey/vim-turbux'
 Plug 'rking/ag.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
 

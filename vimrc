@@ -83,11 +83,9 @@ if exists('$BASE16_THEME')
 endif
 
 " Indent guides
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_color_change_percent = 90
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
-autocmd VimEnter * :call indent_guides#enable()
+let g:indentLine_enabled = 1
+let g:indentLine_setColors = 1
+let g:indentLine_char_list = ['│'] " │, ╎, ⁞, ⋮, ┆, ┊, ┋, ┇,︙
 
 " Prettier formatting
 let g:prettier#autoformat = 0
