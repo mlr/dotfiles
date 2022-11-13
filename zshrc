@@ -1,6 +1,9 @@
 # Path
 export PATH=/usr/local/bin:/opt/local/bin:/Users/ronnie/bin:/usr/local/sbin:$PATH
 
+# add v8 to path
+export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
+
 # add base16-shell
 BASE16_SHELL="$HOME/dotfiles/base16-shell/"
 [ -n "$PS1" ] && \
