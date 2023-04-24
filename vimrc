@@ -243,7 +243,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_ruby_exec='ruby'
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
