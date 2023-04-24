@@ -41,6 +41,10 @@ alias whats-my-ip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 # Misc commands
 alias pgstart='postgres -D /usr/local/pgsql/data'
 
+# Stops Chrome instances for webdriver / automated tests
+# `brew install psgrep`
+alias byechrome="psgrep -a 'Chrome' | grep webdriver | awk '{ print \$2 }' | xargs kill -9"
+
 # Auto lh after cd
 function chpwd() {
   emulate -L zsh
