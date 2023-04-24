@@ -154,39 +154,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 " turbux settings
 let g:turbux_command_rspec = 'bin/rspec'
 
-" configure custom vimux commands for javascript tests
-ruby << EOF
-class Jest
-  def test_command
-    "jest"
-  end
-
-  def current_file
-    VIM::Buffer.current.name
-  end
-
-  def current_line_number
-    VIM::Buffer.current.line_number
-  end
-
-  def send_to_vimux(test_command)
-    Vim.command("call VimuxRunCommand(\"#{test_command}\")")
-  end
-
-  def run_spec
-    send_to_vimux("#{test_command} #{current_file}")
-  end
-end
-EOF
-
-function! RunJestTests()
-  ruby Jest.new.run_spec
-endfunction
-
-" j for javascript, r for react
-autocmd filetype javascript map <Leader>j :call RunJestTests()<CR>
-autocmd filetype javascript map <Leader>r :call RunJestTests()<CR>
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
