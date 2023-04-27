@@ -24,6 +24,8 @@ Plug 'rking/ag.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'quarto-dev/quarto-vim'
 
 " Code editing enhancements
 Plug 'tmhedberg/matchit'
