@@ -56,6 +56,9 @@ Plug 'avdgaag/vim-phoenix'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 
+" Other
+Plug 'ActivityWatch/aw-watcher-vim'
+
 " Initialize plugin system
 call plug#end()
 
