@@ -1,0 +1,6 @@
+*.log
+*.json
+/coverage/*
+/js-coverage/*
+/node_modules/*
+/tmp/*
