@@ -152,7 +152,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " turbux settings
-let g:turbux_command_rspec = 'bin/rspec'
+let g:turbux_command_rspec = 'docker compose run web bin/rspec'
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
