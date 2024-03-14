@@ -28,6 +28,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'quarto-dev/quarto-vim'
 
 " Code editing enhancements
+Plug 'github/copilot.vim'
 Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
