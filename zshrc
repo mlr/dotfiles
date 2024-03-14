@@ -173,6 +173,9 @@ export SAM_CLI_TELEMETRY=0
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
 
+# Composer
+alias composer='php /Users/ronnie/bin/composer.phar'
+
 # jenv (Java version manager)
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
