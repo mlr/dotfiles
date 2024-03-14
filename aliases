@@ -31,6 +31,12 @@ alias bingen="bundle exec rake rails:update:bin && bundle binstubs rspec-core"
 alias rspec="bundle exec rspec"
 alias deploy="cap production deploy"
 
+# Docker
+alias dc="docker compose"
+alias dcu="docker compose up"
+alias dcr="docker compose run"
+alias dcl="docker compose logs"
+
 # Turn off corrections
 alias gitx='nocorrect gitx'
 alias jest='nocorrect jest'
