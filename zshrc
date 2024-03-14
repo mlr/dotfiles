@@ -78,6 +78,8 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=$HISTSIZE
 setopt share_history
+bindkey "^[[A" history-beginning-search-backward # Use up to search history using partially entered command
+bindkey "^[[B" history-beginning-search-forward  # Use down to search history using partially entered command
 
 # ignore duplicate history entries
 setopt histignoredups
