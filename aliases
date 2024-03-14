@@ -52,7 +52,7 @@ function chpwd() {
 }
 
 # Open repository's github project page
-function gh() {
+function ghr() {
   giturl=$(git ls-remote --get-url)
 
   if [ -z "$giturl" ]; then
