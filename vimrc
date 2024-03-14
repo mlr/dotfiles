@@ -250,6 +250,7 @@ let g:syntastic_check_on_wq = 0
 " configure nerdtree
 map <F2> :NERDTreeToggle<CR>
 autocmd FileType nerdtree cnoreabbrev <buffer> bd :NERDTreeToggle
+let NERDTreeShowHidden=1
 
 " configure snipmate
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=javascript-jquery
